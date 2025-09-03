@@ -1,0 +1,254 @@
+
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000;
+  color: #fff;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-weight: bold;
+}
+
+a {
+  color: #999;
+  text-decoration: none;
+  font-size: 0.875rem;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+section {
+  padding: 60px 5%;
+}
+ .navbar {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 50px;
+      z-index: 10;
+    }
+    .navbar .logo {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #e50914;
+      text-decoration: none;
+    }
+    .navbar .signin-btn {
+      background-color: #e50914;
+      color: white;
+      padding: 8px 16px;
+      border: none;
+      font-size: 1rem;
+      cursor: pointer;
+      border-radius: 3px;
+    }
+
+input[type="email"] {
+  padding: 12px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 2px;
+  width: 300px;
+  max-width: 100%;
+}
+
+button {
+  padding: 12px 20px;
+  font-size: 1rem;
+  background-color: #e50914;
+  color: white;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+button:hover {
+  background-color: #f40612;
+}
+
+/* Hero Section (fixed in your HTML to represent hero better if needed) */
+.hero {
+  text-align: center;
+  background-image: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0.2)), url(imgbg.jpg.jpg);
+  background-size: cover;
+  background-position: center;
+  padding: 120px 20px 80px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  margin-bottom: 20px;
+}
+
+.hero-form {
+  margin-top: 20px;
+}
+
+/* Trending Section Styles */
+.trending-section {
+  padding: 40px 20px;
+  background-color: #0b0b0b;
+}
+
+.trending-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Scrollable Card Row */
+.card-row {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 16px;
+  scroll-behavior: smooth;
+  padding-bottom: 10px;
+  scrollbar-width: none; /* Firefox */
+}
+
+.card-row::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
+}
+
+/* Individual Card */
+.card {
+  flex: 0 0 180px;
+  scroll-snap-align: start;
+  background: #0f0e0e;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  overflow: hidden;
+  position: relative;
+}
+
+.card img {
+  width: 100%;
+  display: block;
+  border-radius: 12px;
+}
+
+/* Rank Badge */
+.card .rank {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  background: #e50914;
+  color: #fff;
+  padding: 4px 8px;
+  font-size: 14px;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+
+
+
+/* Features Section (More Reasons to Join) */
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.feature-box {
+  flex: 1 1 calc(50% - 20px);
+  background-color: #111;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.feature-box h2,
+.feature-box h3 {
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+}
+
+/* FAQ Section */
+.faq {
+  background-color: #111;
+}
+
+.faq h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.faq-item {
+  background-color: #222;
+  margin: 10px 0;
+  padding: 20px;
+  font-size: 1rem;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.faq-item:hover {
+  background-color: #333;
+}
+
+/* Footer */
+.footer {
+  background-color: #000;
+  color: #999;
+  padding: 60px 5% 40px;
+}
+
+.footer p,
+.footer select {
+  margin: 10px 0;
+}
+
+.footer form {
+  margin-top: 20px;
+}
+
+.footer-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.footer-bottom {
+  margin-top: 30px;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .feature-box {
+    flex: 1 1 100%;
+  }
+
+  .card {
+    width: 150px;
+  }
+}

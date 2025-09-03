@@ -1,0 +1,58 @@
+/* Trending Section Styles */
+.trending-section {
+  padding: 40px 20px;
+  background-color: #f5f5f5;
+}
+
+.trending-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Scrollable Card Row */
+.card-row {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 16px;
+  scroll-behavior: smooth;
+  padding-bottom: 10px;
+  scrollbar-width: none; /* Firefox */
+}
+
+.card-row::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
+}
+
+/* Individual Card */
+.card {
+  flex: 0 0 180px;
+  scroll-snap-align: start;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  overflow: hidden;
+  position: relative;
+}
+
+.card img {
+  width: 100%;
+  display: block;
+  border-radius: 12px;
+}
+
+/* Rank Badge */
+.card .rank {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  background: #e50914;
+  color: #fff;
+  padding: 4px 8px;
+  font-size: 14px;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+
